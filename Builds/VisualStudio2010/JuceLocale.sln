@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{3BA32553-978E-C8E2-65FC-EBD672DB7568}") = "JuceLocale", "JuceLocale.vcxproj", "{8586BE45-7FAB-B376-6DA3-851F2FB22D2B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8586BE45-7FAB-B376-6DA3-851F2FB22D2B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8586BE45-7FAB-B376-6DA3-851F2FB22D2B}.Debug|Win32.Build.0 = Debug|Win32
+		{8586BE45-7FAB-B376-6DA3-851F2FB22D2B}.Release|Win32.ActiveCfg = Release|Win32
+		{8586BE45-7FAB-B376-6DA3-851F2FB22D2B}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
