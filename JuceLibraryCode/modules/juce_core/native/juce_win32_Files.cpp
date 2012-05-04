@@ -961,18 +961,18 @@ String LocalisedStrings::getUserLocale()
 {
     String locale ("en-US");
     //#ifdef Windows < Windows Vista
-    int bufSize = GetLocaleInfo(LOCALE_USER_DEFAULT, LOCALE_SISO639LANGNAME, nullptr, 0);
+    int bufSize = GetLocaleInfo (LOCALE_USER_DEFAULT, LOCALE_SISO639LANGNAME, nullptr, 0);
     HeapBlock<wchar_t> lcode (bufSize);
-    int result = GetLocaleInfo(LOCALE_USER_DEFAULT, LOCALE_SISO639LANGNAME, lcode, bufSize);
+    int result = GetLocaleInfo (LOCALE_USER_DEFAULT, LOCALE_SISO639LANGNAME, lcode, bufSize);
     String language = static_cast <const wchar_t*> (lcode);
-    bufSize = GetLocaleInfo(LOCALE_USER_DEFAULT, LOCALE_SISO639LANGNAME, nullptr, 0);
+    bufSize = GetLocaleInfo (LOCALE_USER_DEFAULT, LOCALE_SISO639LANGNAME, nullptr, 0);
     HeapBlock<wchar_t> ccode (bufSize);
-    result = GetLocaleInfo(LOCALE_USER_DEFAULT, LOCALE_SISO3166CTRYNAME, ccode, bufSize);
+    result = GetLocaleInfo (LOCALE_USER_DEFAULT, LOCALE_SISO3166CTRYNAME, ccode, bufSize);
     String country = static_cast <const wchar_t*> (ccode);
     locale = language + "-" + country;
     //#elif Windows >= Windows Vista
     //HeapBlock<wchar_t> localeName (LOCALE_NAME_MAX_LENGTH);
-    //int defaultLocaleSuccess  = GetUserDefaultLocaleName(localeName, LOCALE_NAME_MAX_LENGTH);
+    //int defaultLocaleSuccess  = GetUserDefaultLocaleName (localeName, LOCALE_NAME_MAX_LENGTH);
     //if (defaultLocaleSuccess) locale = static_cast <const wchar_t*> (localeName);
     //#endif
     return locale;
