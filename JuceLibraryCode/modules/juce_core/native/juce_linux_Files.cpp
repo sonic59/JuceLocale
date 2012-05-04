@@ -343,3 +343,12 @@ void File::revealToUser() const
     else if (getParentDirectory().exists())
         getParentDirectory().startAsProcess();
 }
+
+String LocalisedStrings::getUserLocale()
+{
+    // Set locale based on environment settings
+    setlocale (LC_ALL, "");
+    String language (nl_langinfo (_NL_IDENTIFICATION_LANGUAGE));
+    String country (nl_langinfo (_NL_IDENTIFICATION_TERRITORY));
+    return (language + "-" + country);
+}

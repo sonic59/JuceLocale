@@ -64,6 +64,8 @@
   #include <sys/errno.h>
   #include <unistd.h>
   #include <netinet/in.h>
+  #include <langinfo.h>
+  #include <locale.h>
  #endif
 
  #include <pwd.h>
