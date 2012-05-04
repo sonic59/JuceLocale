@@ -27,3 +27,12 @@ void Logger::outputDebugString (const String& text)
 {
     __android_log_print (ANDROID_LOG_INFO, "JUCE", text.toUTF8());
 }
+
+String LocalisedStrings::getUserLocale()
+{
+    //java.util.Locale userLocale = java.util.Locale.getDefault();
+    // We want locale names localized to US English
+    //String language (userLocale.getDisplayLanguage (java.util.Locale.US));
+    //String country (userLocale.getDisplayCountry (java.util.Locale.US));
+    return (/*language + */"-"/* + country*/);
+}
