@@ -134,6 +134,11 @@ public:
         @see setCurrentMappings, getCurrentMappings
     */
     static String translateWithCurrentMappings (const char* text);
+    
+    /** Returns the user's current locale
+     
+     */
+    static String getUserLocale();
 
     //==============================================================================
     /** Attempts to look up a string and return its localised version.

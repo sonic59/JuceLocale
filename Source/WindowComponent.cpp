@@ -97,7 +97,7 @@ void WindowComponent::buttonClicked (Button* buttonThatWasClicked)
     if (buttonThatWasClicked == textButton)
     {
         //[UserButtonCode_textButton] -- add your button handler code here..
-        label->setText("Unknown", false);
+        label->setText(LocalisedStrings::getUserLocale(), false);
         //[/UserButtonCode_textButton]
     }
 

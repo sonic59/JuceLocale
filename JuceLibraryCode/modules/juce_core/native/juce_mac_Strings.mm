@@ -89,3 +89,13 @@ String String::convertToPrecomposedUnicode() const
     return result;
    #endif
 }
+
+String LocalisedStrings::getUserLocale()
+{
+    CFLocaleRef cfLocale = CFLocaleCopyCurrent();
+    CFStringRef cftrLanguage = (CFStringRef) CFLocaleGetValue (cfLocale, kCFLocaleLanguageCode);
+    CFStringRef cftrCountry = (CFStringRef) CFLocaleGetValue (cfLocale, kCFLocaleCountryCode);
+    String locale(String::fromCFString (cftrLanguage) + "-" + String::fromCFString (cftrCountry));
+    CFRelease (cfLocale);
+    return locale;
+}
